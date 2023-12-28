@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApp2.PatientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="PatientWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="443*"/>
+            <ColumnDefinition Width="349*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Пациенты" Margin="10" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" />
+        <ListView Name="Spisok" Grid.Row="1" Margin="10" ItemsSource="{Binding Patients}" IsVisibleChanged="Spisok_IsVisibleChanged" Grid.ColumnSpan="2" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding Imya}" Width="150" />
+                    <GridViewColumn Header="Возраст" DisplayMemberBinding="{Binding Age}" Width="150" />
+                    <GridViewColumn Header="Диагноз" DisplayMemberBinding="{Binding Diagnoz}" Width="300" />
+                    <GridViewColumn Header="Код врача" DisplayMemberBinding="{Binding IDvr}" Width="100" />
+
+
+                </GridView>
+
+            </ListView.View>
+
+        </ListView>
+        <Button Content="Добавить" Click="Add_Click" Grid.ColumnSpan="2"/>
+
+
+    </Grid>
+</Window>
+

@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp2.DobWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="DobWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox Name="Im" HorizontalAlignment="Left" Height="23" Margin="77,93,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Voz" HorizontalAlignment="Left" Height="23" Margin="77,134,0,0" TextWrapping="Wrap" Text="Возраст" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <TextBox Name="Dia" HorizontalAlignment="Left" Height="23" Margin="77,179,0,0" TextWrapping="Wrap" Text="Диагноз" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Kod" HorizontalAlignment="Left" Height="23" Margin="77,232,0,0" TextWrapping="Wrap" Text="Код врача" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-2.717,1.161"/>
+        <Button Content="Добавить" Click="Add_Click" Margin="262,294,250,79"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="622,316,0,0" VerticalAlignment="Top" Width="132" Height="69" Click="Button_Click"/>
+
+
+    </Grid>
+</Window>
